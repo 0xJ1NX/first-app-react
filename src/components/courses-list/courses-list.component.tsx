@@ -5,9 +5,9 @@ interface IProps {
   const CoursesList = (props: IProps) => {
     return (
       <ul>
-        <li>{props.list[0]}</li>
-        <li>{props.list[1]}</li>
-        <li>{props.list[2]}</li>
+        {
+          props.list.map((course, index) => <li key={index + course}>{course}</li>)
+        }
       </ul>
     )
   }
